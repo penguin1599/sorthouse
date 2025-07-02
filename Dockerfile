@@ -5,5 +5,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-EXPOSE 5051          # ← comment moved above or removed
+
+# Container will listen on 5051
+EXPOSE 5051
+
 CMD ["python", "app.py"]
