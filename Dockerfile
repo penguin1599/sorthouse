@@ -5,5 +5,5 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-EXPOSE 5051          # or 5051 to match app.py
+EXPOSE 5051          # ← comment moved above or removed
 CMD ["python", "app.py"]
